@@ -1,8 +1,10 @@
 import { useState } from "react"
 import Button from "./components/Button"
+import useStore from "./store/store"
 
 function App() {
-  const [count,setCount] = useState(0)
+  const count = useStore(state => state.count)
+
   return (
     <>
       <h1>count is {count}</h1>

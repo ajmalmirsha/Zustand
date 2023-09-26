@@ -3,11 +3,12 @@ import useStore from "../store/store"
 
 export default function Button ({content,method}) {
 
+   const {IncrementCount,DecrementCount} = useStore(state => state)
     const handleDec = () => {
-        useStore()
+        DecrementCount()
     }
     const handleInc = () => {
-
+        IncrementCount()
     }
     return (
         <>
